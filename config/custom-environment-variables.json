@@ -1,0 +1,8 @@
+{
+  "db-user-name": "DB_USER_NAME",
+  "db-password": "DB_PASSWORD",
+  "db-name": "DB_NAME",
+  "db-app-name": "DB_APP_NAME",
+  "secret-key": "SECRET_KEY",
+  "port": "PORT"
+}

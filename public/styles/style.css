@@ -1,0 +1,16 @@
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+
+footer {
+  background-color: #e3f2fd;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.my-container {
+  margin-top: 6rem;
+  min-height: 73.5vh;
+}
