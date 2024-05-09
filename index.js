@@ -38,7 +38,7 @@ app.use((error, req, res, next) => {
     return res.render("pages/Error/404");
   }
 
-  return res.render("pages/Error/500");
+  // return res.render("pages/Error/500");
 });
 
 // Setup DataBase & Server Here

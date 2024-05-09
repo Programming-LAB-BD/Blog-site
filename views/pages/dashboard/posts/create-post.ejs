@@ -1,4 +1,4 @@
-<%- include("../../partials/header.ejs") %>
+<%- include("../../../partials/header.ejs") %>
 
 <div class="container-fluid w-75">
     <div class="row">
@@ -12,12 +12,22 @@
                     </div>
                     <div class="form-group">
                         <label for="tiny-mce-post-body">Your Post Body:</label>
-                        <textarea name="body" id="tiny-mce-post-body" class="form-control" placeholder="Enter Your Post Body"></textarea>
+                        <textarea name="body" id="tiny-mce-post-body" class="form-control" placeholder="Enter Your Post Body" rows="10"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="tags">Enter Your Tags:</label>
                         <input type="text" name="tags" id="tags" class="form-control" placeholder="tag1, tag2, tag3">
                     </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" name="post-thumbnail" class="custom-file-input" id="inputGroupFile">
+                            <label for="inputGroupFile" class="custom-file-label">Choose File</label>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Create Post">
                </form>
             </div>
         </div>
@@ -27,7 +37,16 @@
 
 
 
-<%- include("../../partials/footer.ejs") %>
+<%- include("../../../partials/footer.ejs") %>
+<script src="https://cdn.tiny.cloud/1/718ch3kb8nm2cc0h5d4kb5lwxbcwgzt2q5vone5qrzlxg3mi/tinymce/5/tinymce.min.js"></script>
+<script src="/scripts/tinymce.js"></script>
+
+<script>
+    $("#inputGroupFile").on("change", function (e) {
+        let filename = e.target.files[0].name
+        $(this).next(".custom-file-label").html(filename)
+    })
+</script>
 
 </body>
 </html>
