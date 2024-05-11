@@ -70,3 +70,15 @@ exports.removeController = async (req, res, next) => {
     });
   }
 };
+
+exports.postImageUploadController = (req, res, next) => {
+  if (req.file) {
+    return res.status(200).json({
+      imageUrl: `/uploads/${req.file.filename}`,
+    });
+  }
+
+  return res.status(500).json({
+    massege: "Server Error.",
+  });
+};
