@@ -2,7 +2,9 @@
 
 <div class="container-fluid w-75">
     <div class="row">
-        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            <%- include('../../../partials/sidebar.ejs') %>
+        </div>
         <div class="col-md-10">
             <div class="card card-body my-5 mx-5">
                 <h5 class="my-3"><%= title %></h5>
@@ -36,6 +38,7 @@
                         </div>
                     </div>
                     <input type="submit" class="btn btn-primary" value="Update Post">
+                    <a href="/posts/delete/<%= post._id %>" class="btn btn-danger">Delete Post</a>
                </form>
             </div>
         </div>
